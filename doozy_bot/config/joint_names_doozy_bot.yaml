@@ -1,0 +1,1 @@
+controller_joint_names: ['', 'l_wheel_joint', 'r_wheel_joint', 'upperstructure_joint', 'l_hand_joint', 'l_shoulder_joint', 'l_elbow_joint', 'l_forarm_joint', 'l_wrist_joint', 'l_finger_joint', 'r_hand_joint', 'r_shoulder_joint', 'r_elbow_joint', 'r_forarm_joint', 'r_wrist_joint', 'r_finger_joint', 'neckro_joint', 'neckupdn_joint', 'necktilt_joint', ]

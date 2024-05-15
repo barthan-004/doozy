@@ -1,0 +1,24 @@
+fake_interpolating_controller_rate: 1000
+controller_list:
+  - name: fake_doozy_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - neckro_joint
+      - neckud_joint
+      - necktilt_joint
+      - l_hand_joint
+      - l_shoulder_joint
+      - l_arm_joint
+      - l_elbow_joint
+      - l_wrist_joint
+      - l_finger_joint
+      - r_hand_joint
+      - r_shoulder_joint
+      - r_arm_joint
+      - r_elbow_joint
+      - r_wrist_joint
+      - r_finger_joint
+      - upperbody_joint
+initial:  # Define initial robot poses per group
+  - group: doozy
+    pose: home

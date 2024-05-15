@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="humanoid_urdf">
+    <link name="base_footprint">
+        <inertial>
+            <origin xyz="5.55111512312578E-17 -1.69586567011493E-14 0.015" rpy="0 0 0" />
+            <mass value="9.42477796076938E-05" />
+            <inertia ixx="7.09214541547896E-09" ixy="1.01610171333826E-56" ixz="-2.73196242009684E-42" iyy="7.09214541547896E-09" iyz="2.5490393388945E-23" izz="4.71238898038469E-11" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/base_footprint.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/base_footprint.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="base_link">
+        <inertial>
+            <origin xyz="-0.058865253150675 0.000241148718194667 0.150453571569457" rpy="0 0 0" />
+            <mass value="12.1588012059866" />
+            <inertia ixx="0.147612795586361" ixy="2.51122441902028E-05" ixz="0.00785651591125418" iyy="0.120849568755044" iyz="-2.9930071595418E-05" izz="0.192821475125935" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/base_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/base_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="base_joint" type="fixed">
+        <origin xyz="-0.04271 -0.0034541 0.025" rpy="0 0 0" />
+        <parent link="base_footprint" />
+        <child link="base_link" />
+        <axis xyz="0 0 0" />
+    </joint>
+    <link name="l_wheel_link">
+        <inertial>
+            <origin xyz="2.4980018054066E-16 -0.0274508966695133 -5.55111512312578E-17" rpy="0 0 0" />
+            <mass value="0.919701249338412" />
+            <inertia ixx="0.00158993491700959" ixy="-9.39276228515603E-18" ixz="-5.43095663313807E-35" iyy="0.00248773886508438" iyz="-1.07793356890755E-19" izz="0.00158993491700959" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/l_wheel_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/l_wheel_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="l_wheel_joint" type="continuous">
+        <origin xyz="0.031201 0.246 0.05" rpy="0 0 0" />
+        <parent link="base_link" />
+        <child link="l_wheel_link" />
+        <axis xyz="0 -1 0" />
+    </joint>
+    <link name="r_wheel_link">
+        <inertial>
+            <origin xyz="-8.32667268468867E-17 0.0274508966695132 0" rpy="0 0 0" />
+            <mass value="0.919701249338412" />
+            <inertia ixx="0.00158993491700959" ixy="-3.13107128495046E-18" ixz="-6.07179821485445E-36" iyy="0.00248773886508438" iyz="1.08922734153761E-19" izz="0.00158993491700959" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/r_wheel_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/r_wheel_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="r_wheel_joint" type="continuous">
+        <origin xyz="0.031201 -0.246 0.05" rpy="0 0 0" />
+        <parent link="base_link" />
+        <child link="r_wheel_link" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <link name="upperbody_link">
+        <inertial>
+            <origin xyz="0.00205228690641193 0.000148315761711149 -0.389725268325384" rpy="0 0 0" />
+            <mass value="6.91174684158711" />
+            <inertia ixx="0.102081185389345" ixy="-4.78400980549201E-05" ixz="0.00492042043623691" iyy="0.0944223334790517" iyz="-7.13439219989285E-05" izz="0.137429752556884" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/upperbody_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.952941176470588 0.996078431372549 0.694117647058824 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/upperbody_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="upperbody_joint" type="revolute">
+        <origin xyz="-0.032127 -4.5465E-05 0.679" rpy="0 0 0" />
+        <parent link="base_link" />
+        <child link="upperbody_link" />
+        <axis xyz="0 0 -1" />
+        <limit lower="-1.57" upper="1.57" effort="1000" velocity="1.23" />
+    </joint>
+    <link name="neckro_link">
+        <inertial>
+            <origin xyz="-0.000121367298027281 -0.00158510811656354 0.0509124920917279" rpy="0 0 0" />
+            <mass value="0.0145537829788612" />
+            <inertia ixx="1.54328391418493E-05" ixy="2.35853333895656E-07" ixz="-2.1766694803039E-08" iyy="9.16061544027707E-06" iyz="-3.96565382962998E-08" izz="9.46822466540881E-06" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/neckro_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/neckro_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="neckro_joint" type="revolute">
+        <origin xyz="-0.0065473 -0.0092427 0.35185" rpy="0 0 0" />
+        <parent link="upperbody_link" />
+        <child link="neckro_link" />
+        <axis xyz="0.00032553 0.031879 -0.99949" />
+        <limit lower="-1.57" upper="1.57" effort="1000" velocity="1.23" />
+    </joint>
+    <link name="neckud_link">
+        <inertial>
+            <origin xyz="0.00434369727451472 -0.0291134473329629 0.0387323990429149" rpy="0 0 0" />
+            <mass value="0.0234428419773425" />
+            <inertia ixx="2.08983970705523E-05" ixy="3.51373719883267E-07" ixz="-1.54496617472419E-07" iyy="1.10836250918229E-05" iyz="-1.10185631620626E-07" izz="1.43528432112155E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/neckud_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/neckud_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="neckud_joint" type="revolute">
+        <origin xyz="-0.0010133 0.025259 0.085849" rpy="0 0 0" />
+        <parent link="neckro_link" />
+        <child link="neckud_link" />
+        <axis xyz="0.035202 -0.99887 -0.031848" />
+        <limit lower="-1.57" upper="1.57" effort="1000" velocity="1.23" />
+    </joint>
+    <link name="necktilt_link">
+        <inertial>
+            <origin xyz="-0.00512154695561659 -0.00106174027475656 0.0150795043233884" rpy="0 0 0" />
+            <mass value="0.00551601758227205" />
+            <inertia ixx="1.28129484531447E-06" ixy="-2.51802723932326E-08" ixz="3.9492574431568E-07" iyy="1.33923395267231E-06" iyz="4.20023117302787E-08" izz="8.65254766960153E-07" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/necktilt_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/necktilt_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="necktilt_joint" type="revolute">
+        <origin xyz="0.019117 -0.030395 0.095269" rpy="0 0 0" />
+        <parent link="neckud_link" />
+        <child link="necktilt_link" />
+        <axis xyz="0.99894 0.034219 0.030901" />
+        <limit lower="-1.57" upper="1.57" effort="1000" velocity="1.23" />
+    </joint>
+    <link name="l_hand_link">
+        <inertial>
+            <origin xyz="-0.00138410719108586 -0.0342648249321449 -0.00110207689214903" rpy="0 0 0" />
+            <mass value="0.114916853451242" />
+            <inertia ixx="0.000370956714110063" ixy="6.68904931400419E-07" ixz="3.05984244772836E-07" iyy="6.69941590125266E-05" iyz="-8.63205601571652E-06" izz="0.000338282138326251" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/l_hand_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/l_hand_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="l_hand_joint" type="revolute">
+        <origin xyz="-0.0049943 0.14284 0.28867" rpy="0 0 0" />
+        <parent link="upperbody_link" />
+        <child link="l_hand_link" />
+        <axis xyz="0.010206 0.99944 0.03188" />
+        <limit lower="-3.14" upper="0.0" effort="1000" velocity="1.23" />
+    </joint>
+    <link name="l_shoulder_link">
+        <inertial>
+            <origin xyz="-0.0176001712302496 0.000243563765863875 -0.101444167301855" rpy="0 0 0" />
+            <mass value="0.0280221823539444" />
+            <inertia ixx="6.06463887970406E-05" ixy="-4.08992216915223E-09" ixz="4.69031854982275E-07" iyy="6.00558337478981E-05" iyz="-8.46815163881734E-08" izz="5.0593135976451E-06" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/l_shoulder_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/l_shoulder_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="l_shoulder_joint" type="revolute">
+        <origin xyz="0.027011 0.045696 0.0016909" rpy="0 0 0" />
+        <parent link="l_hand_link" />
+        <child link="l_shoulder_link" />
+        <axis xyz="0.99991 -0.01048 0.0084524" />
+        <limit lower="0.0" upper="3.14" effort="1000" velocity="1.23" />
+    </joint>
+    <link name="l_arm_link">
+        <inertial>
+            <origin xyz="0.000264681581807952 -0.000728532853130293 -0.0284583269002137" rpy="0 0 0" />
+            <mass value="0.0708345944879514" />
+            <inertia ixx="5.5263757611317E-05" ixy="9.36450033146291E-07" ixz="1.49083830294407E-07" iyy="8.66714264937862E-05" iyz="4.62936190682027E-06" izz="5.83572424914588E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/l_arm_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/l_arm_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="l_arm_joint" type="revolute">
+        <origin xyz="-0.01712 0.0010968 -0.17299" rpy="0 0 0" />
+        <parent link="l_shoulder_link" />
+        <child link="l_arm_link" />
+        <axis xyz="0.0084367 -0.001539 -0.99996" />
+        <limit lower="-1.57" upper="1.57" effort="1000" velocity="1.23" />
+    </joint>
+    <link name="l_elbow_link">
+        <inertial>
+            <origin xyz="0.00492788059856938 -0.0298309686433103 -0.0667963789782932" rpy="0 0 0" />
+            <mass value="0.0343679873488541" />
+            <inertia ixx="3.06909582860722E-05" ixy="9.10541344424622E-08" ixz="1.58259647271887E-06" iyy="3.36131015862915E-05" iyz="-1.62629207852342E-07" izz="8.73568738242493E-06" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/l_elbow_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/l_elbow_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="l_elbow_joint" type="revolute">
+        <origin xyz="0.0012808 0.030764 -0.035038" rpy="0 0 0" />
+        <parent link="l_arm_link" />
+        <child link="l_elbow_link" />
+        <axis xyz="0.028314 0.9996 -0.0012995" />
+        <limit lower="-1.57" upper="1.57" effort="1000" velocity="1.23" />
+    </joint>
+    <link name="l_wrist_link">
+        <inertial>
+            <origin xyz="0.00672143408702428 -0.00656380744402507 -0.0709778769046243" rpy="0 0 0" />
+            <mass value="0.1295209726278" />
+            <inertia ixx="0.000178990475644927" ixy="-8.81723689975516E-07" ixz="1.90585847808358E-05" iyy="0.000221575454468605" iyz="3.95079342482515E-06" izz="8.17093773393247E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/l_wrist_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/l_wrist_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="l_wrist_joint" type="revolute">
+        <origin xyz="0.0078635 -0.030119 -0.12165" rpy="0 0 0" />
+        <parent link="l_elbow_link" />
+        <child link="l_wrist_link" />
+        <axis xyz="0.071648 -0.0033262 -0.99742" />
+        <limit lower="-1.57" upper="1.57" effort="1000" velocity="1.23" />
+    </joint>
+    <link name="l_finger_link">
+        <inertial>
+            <origin xyz="0 0.00132165156655861 0" rpy="0 0 0" />
+            <mass value="0.00061746790316696" />
+            <inertia ixx="1.54611618322015E-08" ixy="-7.33320585549857E-26" ixz="1.14934124377714E-26" iyy="2.97170461169939E-08" iyz="1.57320113387214E-22" izz="1.54611618322015E-08" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/l_finger_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.823529411764706 0.823529411764706 1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/l_finger_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="l_finger_joint" type="revolute">
+        <origin xyz="0.0034603 -0.046206 -0.11289" rpy="0 0 0" />
+        <parent link="l_wrist_link" />
+        <child link="l_finger_link" />
+        <axis xyz="0 1 0" />
+        <limit lower="-1.57" upper="1.57" effort="1000" velocity="1.23" />
+    </joint>
+    <link name="r_hand_link">
+        <inertial>
+            <origin xyz="-0.00068413478461643 0.0342862182648051 0.00109350378033035" rpy="0 0 0" />
+            <mass value="0.114916853451242" />
+            <inertia ixx="0.000370804780226237" ixy="-6.88292875926268E-06" ixz="-2.14291532701362E-07" iyy="6.71504034972058E-05" iyz="-8.65798419805494E-06" izz="0.000338277827725399" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/r_hand_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/r_hand_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="r_hand_joint" type="revolute">
+        <origin xyz="-0.0080561 -0.15699 0.2791" rpy="0 0 0" />
+        <parent link="upperbody_link" />
+        <child link="r_hand_link" />
+        <axis xyz="0.010206 0.99944 0.03188" />
+        <limit lower="-3.14" upper="0.0" effort="1000" velocity="1.23" />
+    </joint>
+    <link name="r_shoulder_link">
+        <inertial>
+            <origin xyz="-0.0184719917435935 0.000394467340017593 -0.101288569674667" rpy="0 0 0" />
+            <mass value="0.0280221823539667" />
+            <inertia ixx="6.06503472266041E-05" ixy="-4.64108848630578E-09" ixz="-9.04465633229716E-09" iyy="6.00559614198698E-05" iyz="4.63940471446338E-11" izz="5.05522749622923E-06" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/r_shoulder_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/r_shoulder_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="r_shoulder_joint" type="revolute">
+        <origin xyz="0.026073 -0.046245 -0.0014708" rpy="0 0 0" />
+        <parent link="r_hand_link" />
+        <child link="r_shoulder_link" />
+        <axis xyz="0.99995 -0.010206 -0.00016273" />
+        <limit lower="-3.14" upper="0.0" effort="1000" velocity="1.23" />
+    </joint>
+    <link name="r_arm_link">
+        <inertial>
+            <origin xyz="-4.86184525169964E-05 0.000683742423951958 -0.0284606462373371" rpy="0 0 0" />
+            <mass value="0.0708345095187025" />
+            <inertia ixx="5.52364393322298E-05" ixy="8.48386215729183E-08" ixz="-4.39983448064579E-08" iyy="8.6687022868429E-05" iyz="-4.66796405182517E-06" izz="5.83687358115144E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/r_arm_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/r_arm_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="r_arm_joint" type="revolute">
+        <origin xyz="-0.018415 -0.00097725 -0.17283" rpy="0 0 0" />
+        <parent link="r_shoulder_link" />
+        <child link="r_arm_link" />
+        <axis xyz="0.00016269 0 1" />
+        <limit lower="-1.57" upper="1.57" effort="1000" velocity="1.23" />
+    </joint>
+    <link name="r_elbow_link">
+        <inertial>
+            <origin xyz="-0.00096270853430383 0.0295927080093579 -0.0670766111767334" rpy="0 0 0" />
+            <mass value="0.0343679873488544" />
+            <inertia ixx="3.0802219666292E-05" ixy="1.89922125334388E-16" ixz="5.86124310511246E-18" iyy="3.36161769905873E-05" iyz="8.56629044431799E-08" izz="8.62135059790961E-06" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/r_elbow_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/r_elbow_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="r_elbow_joint" type="revolute">
+        <origin xyz="-0.00011827 -0.030834 -0.035" rpy="0 0 0" />
+        <parent link="r_arm_link" />
+        <child link="r_elbow_link" />
+        <axis xyz="0 1 0" />
+        <limit lower="-1.57" upper="1.57" effort="1000" velocity="1.23" />
+    </joint>
+    <link name="r_wrist_link">
+        <inertial>
+            <origin xyz="0.00191340091533826 0.00535746595263272 -0.0740312537478306" rpy="0 0 0" />
+            <mass value="0.123130860562075" />
+            <inertia ixx="0.000179684772279338" ixy="6.29857952313707E-07" ixz="1.21796341634151E-05" iyy="0.00021730129336006" iyz="-4.38844403024007E-06" izz="7.55303602792132E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/r_wrist_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/r_wrist_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="r_wrist_joint" type="revolute">
+        <origin xyz="0 0.029726 -0.122" rpy="0 0 0" />
+        <parent link="r_elbow_link" />
+        <child link="r_wrist_link" />
+        <axis xyz="0 0 1" />
+        <limit lower="-1.57" upper="1.57" effort="1000" velocity="1.23" />
+    </joint>
+    <link name="r_finger_link">
+        <inertial>
+            <origin xyz="0 -0.00132165156655867 0" rpy="0 0 0" />
+            <mass value="0.00061746790316696" />
+            <inertia ixx="1.54611618322015E-08" ixy="-2.74695557135579E-25" ixz="-1.19396595542024E-26" iyy="2.97170461169939E-08" iyz="5.22537658880144E-23" izz="1.54611618322015E-08" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/r_finger_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.823529411764706 0.823529411764706 1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://humanoid_urdf/meshes/r_finger_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="r_finger_joint" type="revolute">
+        <origin xyz="-0.0032067 0.045279 -0.11233" rpy="0 0 0" />
+        <parent link="r_wrist_link" />
+        <child link="r_finger_link" />
+        <axis xyz="0 1 0" />
+        <limit lower="-1.57" upper="1.57" effort="1000" velocity="1.23" />
+    </joint>
+    <transmission name="trans_l_wheel_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="l_wheel_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="l_wheel_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_r_wheel_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="r_wheel_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="r_wheel_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_upperbody_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="upperbody_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="upperbody_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_neckro_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="neckro_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="neckro_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_neckud_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="neckud_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="neckud_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_necktilt_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="necktilt_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="necktilt_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_l_hand_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="l_hand_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="l_hand_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_l_shoulder_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="l_shoulder_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="l_shoulder_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_l_arm_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="l_arm_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="l_arm_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_l_elbow_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="l_elbow_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="l_elbow_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_l_wrist_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="l_wrist_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="l_wrist_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_l_finger_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="l_finger_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="l_finger_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_r_hand_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="r_hand_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="r_hand_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_r_shoulder_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="r_shoulder_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="r_shoulder_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_r_arm_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="r_arm_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="r_arm_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_r_elbow_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="r_elbow_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="r_elbow_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_r_wrist_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="r_wrist_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="r_wrist_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_r_finger_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="r_finger_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="r_finger_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <gazebo>
+        <plugin name="gazebo_ros_control">
+            <robotNamespace>/</robotNamespace>
+        </plugin>
+    </gazebo>
+</robot>
+

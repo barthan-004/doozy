@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: humanoid_urdf
+    relative_path: urdf/humanoid_urdf.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/humanoid_urdf.srdf
+  CONFIG:
+    author_name: barathan
+    author_email: smr.barathan@gmail.com
+    generated_timestamp: 1715156819

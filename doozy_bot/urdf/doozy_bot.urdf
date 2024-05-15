@@ -1,0 +1,1134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="doozy_bot">
+  <link
+    name="base_footprint">
+    <inertial>
+      <origin
+        xyz="0 -0.000509211285818933 0.0149913543039445"
+        rpy="0 0 0" />
+      <mass
+        value="9.42477796076938E-05" />
+      <inertia
+        ixx="7.09214541547896E-09"
+        ixy="9.27430731204713E-44"
+        ixz="-2.73038777231542E-42"
+        iyy="7.08402654062148E-09"
+        iyz="2.39022450841472E-10"
+        izz="5.52427646613278E-11" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/base_footprint.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/base_footprint.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0450538288581056 -0.0059277144472778 0.187365876869582"
+        rpy="0 0 0" />
+      <mass
+        value="18.2782100730227" />
+      <inertia
+        ixx="0.247263775283813"
+        ixy="-0.000384546195150551"
+        ixz="0.012827341177219"
+        iyy="0.21381201004082"
+        iyz="-0.00397573419022689"
+        izz="0.328996534571311" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_joint"
+    type="fixed">
+    <origin
+      xyz="-0.035588 -0.0023507 0.024935"
+      rpy="0 0 0" />
+    <parent
+      link="base_footprint" />
+    <child
+      link="base_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="l_wheel_link">
+    <inertial>
+      <origin
+        xyz="2.4980018054066E-16 -0.0274350745289081 -0.000931887092704933"
+        rpy="0 0 0" />
+      <mass
+        value="0.919701249338412" />
+      <inertia
+        ixx="0.00158993491700959"
+        ixy="-9.61192490481617E-18"
+        ixz="-3.2648822387594E-19"
+        iyy="0.00248670421133997"
+        iyz="3.04605598807479E-05"
+        izz="0.001590969570754" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/l_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/l_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.031201 0.24816 0.058458"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l_wheel_link" />
+    <axis
+      xyz="0 -0.99942 -0.033947" />
+  </joint>
+  <link
+    name="r_wheel_link">
+    <inertial>
+      <origin
+        xyz="-8.32667268468867E-17 0.0274350745289081 0.000931887092704919"
+        rpy="0 0 0" />
+      <mass
+        value="0.919701249338413" />
+      <inertia
+        ixx="0.00158993491700959"
+        ixy="-3.13745510154636E-18"
+        ixz="-1.06569927848804E-19"
+        iyy="0.00248670421133997"
+        iyz="3.04605598807479E-05"
+        izz="0.001590969570754" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/r_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/r_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.031201 -0.24756 0.04162"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r_wheel_link" />
+    <axis
+      xyz="0 0.99942 0.033947" />
+  </joint>
+  <link
+    name="upperstructure_link">
+    <inertial>
+      <origin
+        xyz="0.00650426250763791 0.0139508539846484 -0.381471551160271"
+        rpy="0 0 0" />
+      <mass
+        value="6.91172210843983" />
+      <inertia
+        ixx="0.102083252848626"
+        ixy="-0.000141822394323753"
+        ixz="0.00491852393509332"
+        iyy="0.0944757426967062"
+        iyz="-0.00150762305279463"
+        izz="0.137379313455746" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/upperstructure_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/upperstructure_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="upperstructure_joint"
+    type="revolute">
+    <origin
+      xyz="-0.03658 -0.023016 0.67761"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="upperstructure_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="l_hand_link">
+    <inertial>
+      <origin
+        xyz="0.0010338863787413 -0.036294882926561 0.00530678934060824"
+        rpy="0 0 0" />
+      <mass
+        value="0.114916853451241" />
+      <inertia
+        ixx="0.000370894378627566"
+        ixy="-3.78201115435855E-06"
+        ixz="-7.89996924889332E-07"
+        iyy="6.67653118802987E-05"
+        iyz="9.23854158134228E-08"
+        izz="0.000338573320940976" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/l_hand_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/l_hand_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_hand_joint"
+    type="revolute">
+    <origin
+      xyz="-0.002 0.14769 0.28663"
+      rpy="0 0 0" />
+    <parent
+      link="upperstructure_link" />
+    <child
+      link="l_hand_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="l_shoulder_link">
+    <inertial>
+      <origin
+        xyz="0.0110607132878407 0.00282341661543634 -0.101719140520748"
+        rpy="0 0 0" />
+      <mass
+        value="0.0280221823538722" />
+      <inertia
+        ixx="6.06172510078809E-05"
+        ixy="3.60643143135308E-08"
+        ixz="-1.35631310716094E-06"
+        iyy="6.00193217232625E-05"
+        iyz="1.41801460703284E-06"
+        izz="5.12496341113117E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/l_shoulder_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/l_shoulder_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_shoulder_joint"
+    type="revolute">
+    <origin
+      xyz="-0.018538 0.044 0.0057849"
+      rpy="0 0 0" />
+    <parent
+      link="l_hand_link" />
+    <child
+      link="l_shoulder_link" />
+    <axis
+      xyz="0.9997 0 -0.02442" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="l_elbow_link">
+    <inertial>
+      <origin
+        xyz="-0.000790285985823064 0.00141266542665888 -0.0284224540187951"
+        rpy="0 0 0" />
+      <mass
+        value="0.0708334388528727" />
+      <inertia
+        ixx="5.54225684155051E-05"
+        ixy="-2.42762052631047E-06"
+        ixz="3.21338482653483E-07"
+        iyy="8.67349318026477E-05"
+        iyz="-3.8671817631249E-06"
+        izz="5.81326034664363E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/l_elbow_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/l_elbow_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_elbow_joint"
+    type="revolute">
+    <origin
+      xyz="0.0094738 0.0033095 -0.17326"
+      rpy="0 0 0" />
+    <parent
+      link="l_shoulder_link" />
+    <child
+      link="l_elbow_link" />
+    <axis
+      xyz="0.024412 -0.025799 0.99937" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="l_forarm_link">
+    <inertial>
+      <origin
+        xyz="0.00323106841776752 -0.0275646010086832 -0.0678651597663743"
+        rpy="0 0 0" />
+      <mass
+        value="0.0343679873488544" />
+      <inertia
+        ixx="3.08185568488202E-05"
+        ixy="-2.14041544030977E-07"
+        ixz="5.90561698737247E-09"
+        iyy="3.35854134168072E-05"
+        iyz="6.06082537839032E-07"
+        izz="8.63577698916135E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/l_forarm_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/l_forarm_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_forarm_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0033417 0.031958 -0.034115"
+      rpy="0 0 0" />
+    <parent
+      link="l_elbow_link" />
+    <child
+      link="l_forarm_link" />
+    <axis
+      xyz="0.076206 -0.99671 -0.027592" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="l_wrist_link">
+    <inertial>
+      <origin
+        xyz="0.000194550669443488 -0.0042920704722024 -0.0636596439358776"
+        rpy="0 0 0" />
+      <mass
+        value="0.126777666096182" />
+      <inertia
+        ixx="0.000179484818623813"
+        ixy="-9.69712905703243E-07"
+        ixz="1.21843533593944E-05"
+        iyy="0.000220546191652133"
+        iyz="8.35397251506521E-06"
+        izz="7.85294064996557E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/l_wrist_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/l_wrist_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_wrist_joint"
+    type="revolute">
+    <origin
+      xyz="0.0023892 -0.026523 -0.11278"
+      rpy="0 0 0" />
+    <parent
+      link="l_forarm_link" />
+    <child
+      link="l_wrist_link" />
+    <axis
+      xyz="0.00023894 0.02769 -0.99962" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="l_finger_link">
+    <inertial>
+      <origin
+        xyz="2.77555756156289E-17 0.00132088979337613 4.48666595760372E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.00061746790316696" />
+      <inertia
+        ixx="1.54611618322015E-08"
+        ixy="-1.80946767853971E-25"
+        ixz="5.8003269899531E-27"
+        iyy="2.97006172473206E-08"
+        iyz="4.83671538581666E-10"
+        izz="1.54775907018748E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/l_finger_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.823529411764706 0.823529411764706 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/l_finger_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_finger_joint"
+    type="revolute">
+    <origin
+      xyz="-0.009994 -0.043298 -0.086808"
+      rpy="0 0 0" />
+    <parent
+      link="l_wrist_link" />
+    <child
+      link="l_finger_link" />
+    <axis
+      xyz="0 0.99942 0.033947" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="r_hand_link">
+    <inertial>
+      <origin
+        xyz="0.00103419479642466 0.0362948829265535 4.44089209850063E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.114916853451242" />
+      <inertia
+        ixx="0.000370913676348123"
+        ixy="3.78313936258588E-06"
+        ixz="2.23775516752745E-19"
+        iyy="6.67653118802989E-05"
+        iyz="1.33831205666179E-19"
+        izz="0.000338554023220421" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/r_hand_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/r_hand_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_hand_joint"
+    type="revolute">
+    <origin
+      xyz="-0.002 -0.15231 0.29196"
+      rpy="0 0 0" />
+    <parent
+      link="upperstructure_link" />
+    <child
+      link="r_hand_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="r_shoulder_link">
+    <inertial>
+      <origin
+        xyz="0.00854141894586105 0.00364447848035132 -0.101226195869641"
+        rpy="0 0 0" />
+      <mass
+        value="0.0280221823539668" />
+      <inertia
+        ixx="6.06503815149694E-05"
+        ixy="1.42499799388307E-09"
+        ixz="4.61272799354756E-11"
+        iyy="5.99925442940016E-05"
+        iyz="1.86605572174193E-06"
+        izz="5.11861033373156E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/r_shoulder_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/r_shoulder_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_shoulder_joint"
+    type="revolute">
+    <origin
+      xyz="-0.018544 -0.044 0"
+      rpy="0 0 0" />
+    <parent
+      link="r_hand_link" />
+    <child
+      link="r_shoulder_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="r_elbow_link">
+    <inertial>
+      <origin
+        xyz="4.39855432440017E-05 0.000282843607480099 -0.0284674627359862"
+        rpy="0 0 0" />
+      <mass
+        value="0.0708345172477184" />
+      <inertia
+        ixx="5.5236459553885E-05"
+        ixy="8.40398447814937E-08"
+        ixz="4.73853688145138E-08"
+        iyy="8.63376374418204E-05"
+        iyz="5.61799666696872E-06"
+        izz="5.87181164047261E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/r_elbow_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/r_elbow_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_elbow_joint"
+    type="revolute">
+    <origin
+      xyz="0.0083874 0.0070328 -0.17269"
+      rpy="0 0 0" />
+    <parent
+      link="r_shoulder_link" />
+    <child
+      link="r_elbow_link" />
+    <axis
+      xyz="0 0.033947 -0.99942" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="r_forarm_link">
+    <inertial>
+      <origin
+        xyz="-0.000241803181302763 0.031852894128237 -0.0660398486436837"
+        rpy="0 0 0" />
+      <mass
+        value="0.0343679873488544" />
+      <inertia
+        ixx="3.07996579824156E-05"
+        ixy="-9.01142408758124E-09"
+        ixz="2.38187854664461E-07"
+        iyy="3.35815643914489E-05"
+        iyz="9.33373715971777E-07"
+        izz="8.65852488092457E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/r_forarm_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/r_forarm_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_forarm_joint"
+    type="revolute">
+    <origin
+      xyz="0.00011257 -0.02996 -0.036038"
+      rpy="0 0 0" />
+    <parent
+      link="r_elbow_link" />
+    <child
+      link="r_forarm_link" />
+    <axis
+      xyz="0 0.99942 0.033947" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="r_wrist_link">
+    <inertial>
+      <origin
+        xyz="0.0046435573430868 0.00206611468602114 -0.0624558053069965"
+        rpy="0 0 0" />
+      <mass
+        value="0.0878211831020795" />
+      <inertia
+        ixx="0.000168921592259933"
+        ixy="8.32338951662842E-07"
+        ixz="1.32269795624382E-05"
+        iyy="0.000211253989672042"
+        iyz="2.69331722434322E-07"
+        izz="6.89712485001636E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/r_wrist_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/r_wrist_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_wrist_joint"
+    type="revolute">
+    <origin
+      xyz="0.0011858 0.03351 -0.11092"
+      rpy="0 0 0" />
+    <parent
+      link="r_forarm_link" />
+    <child
+      link="r_wrist_link" />
+    <axis
+      xyz="0.010747 0.033945 -0.99937" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="r_finger_link">
+    <inertial>
+      <origin
+        xyz="0 -0.00132088979337608 -4.48666595760372E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.000617467903166957" />
+      <inertia
+        ixx="1.54611618322015E-08"
+        ixy="-7.90122920897465E-25"
+        ixz="-3.83381436684898E-26"
+        iyy="2.97006172473206E-08"
+        iyz="4.83671538581563E-10"
+        izz="1.54775907018748E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/r_finger_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.823529411764706 0.823529411764706 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/r_finger_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_finger_joint"
+    type="revolute">
+    <origin
+      xyz="0.0085537 0.043536 -0.090776"
+      rpy="0 0 0" />
+    <parent
+      link="r_wrist_link" />
+    <child
+      link="r_finger_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="neckro_link">
+    <inertial>
+      <origin
+        xyz="-0.000100819305809713 4.81158455832298E-05 0.0199371835605915"
+        rpy="0 0 0" />
+      <mass
+        value="0.0145537829788612" />
+      <inertia
+        ixx="1.54233511847542E-05"
+        ixy="-3.38463069800254E-07"
+        ixz="-3.38065120829672E-08"
+        iyy="9.16786919787863E-06"
+        iyz="-2.68813926800935E-08"
+        izz="9.47045886490237E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/neckro_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/neckro_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="neckro_joint"
+    type="revolute">
+    <origin
+      xyz="-0.002 -0.0023084 0.40096"
+      rpy="0 0 0" />
+    <parent
+      link="upperstructure_link" />
+    <child
+      link="neckro_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="neckupdn_link">
+    <inertial>
+      <origin
+        xyz="-0.00606431262985568 -0.027703659863342 0.0395270869119519"
+        rpy="0 0 0" />
+      <mass
+        value="0.0234428419773424" />
+      <inertia
+        ixx="2.08647141709084E-05"
+        ixy="-5.49956339024811E-07"
+        ixz="3.53843689606319E-07"
+        iyy="1.10986009831225E-05"
+        iyz="-1.98631086510505E-08"
+        izz="1.43715502195595E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/neckupdn_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/neckupdn_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="neckupdn_joint"
+    type="revolute">
+    <origin
+      xyz="0.0015693 0.027956 0.054"
+      rpy="0 0 0" />
+    <parent
+      link="neckro_link" />
+    <child
+      link="neckupdn_link" />
+    <axis
+      xyz="0.056047 0.99843 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="necktilt_link">
+    <inertial>
+      <origin
+        xyz="0.00466458623502139 -0.000780202193016111 0.0152440777373635"
+        rpy="0 0 0" />
+      <mass
+        value="0.00551601758227204" />
+      <inertia
+        ixx="1.30456325198239E-06"
+        ixy="1.51173071236332E-08"
+        ixz="-3.81885711171832E-07"
+        iyy="1.34042672590411E-06"
+        iyz="3.85073973669066E-08"
+        izz="8.40793587060435E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/necktilt_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://doozy_bot/meshes/necktilt_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="necktilt_joint"
+    type="revolute">
+    <origin
+      xyz="-0.022445 -0.026784 0.095626"
+      rpy="0 0 0" />
+    <parent
+      link="neckupdn_link" />
+    <child
+      link="necktilt_link" />
+    <axis
+      xyz="0.99843 -0.056047 -0.00095235" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>

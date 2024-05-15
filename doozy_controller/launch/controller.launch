@@ -1,0 +1,22 @@
+<launch>
+<node
+    pkg="doozy_controller"
+    type="check.py"
+    name="joint_servo"
+/> 
+<node
+    pkg="doozy_controller"
+    type="controller2.py"
+    name="servo_control"
+/> 
+<node
+    pkg="doozy_controller"
+    type="joint.py"
+    name="joint"
+/> 
+<node
+    pkg="doozy_controller"
+    type="controller1.py"
+    name="control"
+/>
+</launch>
